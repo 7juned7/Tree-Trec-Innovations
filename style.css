@@ -1,0 +1,365 @@
+*{
+margin: 0;padding: 0;
+}
+
+.container{
+  
+   height: 100vh;
+
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    padding: 1rem 4rem;
+    position: sticky;
+  top: 0;
+   z-index: 999;
+   background-color: white;
+   box-shadow:  0 0 5px  .1px black;
+   
+}
+.logo{
+    width: 60px;
+   
+}
+.menu{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: black;
+    width: 60%;
+    padding: 4rem 1rem;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 5px  rgb(135,133,114) ;
+    transform: translateX(-100%);
+    transition: 500ms ease-in;
+    z-index: 99;
+   
+    
+}
+.navigation {
+list-style: none;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+justify-content: center;
+align-items: center;
+padding: 4rem 0;
+
+
+}
+a:hover{
+    border-bottom: 5px solid rgb(44, 62, 39);
+   
+}
+a{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: border 100ms linear;
+}
+
+.hamburger{
+    position: absolute;
+    top: 2rem;
+    display: flex;
+    z-index: 999;
+    left: 5%;
+    cursor: pointer;
+}
+.ham_close{
+    display: none;
+}
+.ham_close[data-visible="false"]{
+    display: block;
+   
+}
+.ham_open{
+    display: block;
+}
+.ham_open[data-visible="false"]{
+    display: none;
+}
+.menu[data-visible="false"]{
+    transform: translateX(0);
+}
+/* ---------------------Home----------------------- */
+
+
+.Home{
+    padding: 7rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 0rem;
+    
+  
+   
+}
+.about-Tree-Trec-Innovations{
+    text-align: justify;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.about-Tree-Trec-Innovations h2{
+text-align: center;
+margin-bottom: 2rem;
+color: rgb(114, 61, 61);
+font-weight: 200;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.Tree-Trec-Innovations-graphic{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.home_img{
+    position:relative;
+}
+.home_img img{
+   width: 250px;
+
+}
+.play{
+
+    object-fit: contain;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    
+}
+.play img{
+width: 70px;
+
+}
+.home_video{
+    z-index: 99999;
+   
+  object-fit: cover;
+ width: 95%;
+ display: none;
+  background-color: red;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+ 
+   
+    justify-content: center;
+    align-items: center;
+}
+.overlay{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+}
+.show{
+    display: flex;
+    
+}
+
+/* -----------contact_us-------------- */
+
+.contact_us{
+display: flex;
+flex-direction: column;
+padding: 2rem 1rem;
+align-items: center;
+gap: 8rem;
+
+
+
+}
+.contact_us h1{
+    font-size: 1.5rem;
+
+}
+.contact-info{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+
+.info{
+    width: 250px;
+   
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    align-items: center;
+}
+
+.info h2{
+  font-size: 12px;
+  padding: 1rem 0;
+}
+.info p{
+    font-size: 10px;
+}
+
+/* -----------------Team---------------------- */
+.team{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #f1f1f1;
+    text-align: center;
+   
+}
+.team_members{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items:center;
+    margin: 4rem 0;
+   gap: 8rem;
+    
+}
+.position h2{
+color: black;
+font-size: 2.5rem;
+}
+.members{
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: white;
+  
+  border-radius: 10px;
+  padding: 10px;
+
+}
+.members_info{
+    
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -20px;
+}
+.pos{
+    font-size: 12px;
+    padding: 1rem 0;
+
+}
+
+
+.members_info img{
+    
+   position: relative;
+   top: -50px;
+width: 100px;
+height: 100px;
+object-fit: cover;
+border-radius: 50%;
+
+}
+
+
+@media only screen and (min-width: 600px) {
+
+   .hamburger{
+    display: none;
+   }
+   .navbar{
+    justify-content: space-between;
+   }
+   .menu{
+    padding: 1rem;
+    position: relative;
+    transform: translate(0);
+    width: fit-content;
+    height: max-content;
+    background: transparent;
+    box-shadow: none;
+    border-radius: none;
+    
+    
+   }
+   .navigation {
+   
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding: 0;
+    
+    
+    
+    }
+
+    a{
+        color: black;
+    }
+    /* ----------------HOME--------------- */
+      
+    .Home{
+        padding: 2rem 4rem;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        
+      
+       
+    }
+    .about-Tree-Trec-Innovations{
+        text-align: justify;
+        width: 50%;
+    }
+    .Tree-Trec-Innovations-graphic{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+        }
+        .home_video{
+            display: none;
+          object-fit: cover;
+         width: 55%;
+         
+          background-color: red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+           
+            justify-content: center;
+            align-items: center;
+        }
+        .show{
+            display: flex;
+            
+        }
+        /* -----------Contact us-------------- */
+        .contact-info{
+            display: flex;
+           flex-direction: row;
+            gap: 1rem;
+            }
+  }
